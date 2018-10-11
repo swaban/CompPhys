@@ -1,4 +1,4 @@
-XX = g++
+CXX = g++
 G77 = g77
 CPP = gcc -E
 CXXFLAGS = -g -O2 -fPIC -Wno-deprecated 

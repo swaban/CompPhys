@@ -1,4 +1,4 @@
-CXX = g++
+CXX = g++ -Qunused-arguments
 G77 = g77
 CPP = gcc -E
 CXXFLAGS = -g -O2 -fPIC -Wno-deprecated 
@@ -18,7 +18,7 @@ read.exe: read.h read.cc libMyLib.so
 libMyLib.so: util.cc init.cc
 	$(CXX) $(CXXFLAGS) -o util.o -c util.cc  $(INCFLAGS) $(LIBS)
 	$(CXX) $(CXXFLAGS) -o init.o -c init.cc  $(INCFLAGS) $(LIBS)
-	$(CXX) $(CXXFLAGS) -shared `ls *.o` -o libMyLib.so
+	$(CXX) $(CXXFLAGS) -shared `ls *.o` -o libMyLib.so $(INCFLAGS) $(LIBS)
 
 clean:
 	rm -rf *.o libMyLib.so *.exe *.exe*

@@ -1,1 +1,1 @@
-# CompPhys
+# Computational Physics

@@ -1,13 +1,13 @@
-CXX = g++ -Qunused-arguments
+CXX = clang
 G77 = g77
 CPP = gcc -E
-CXXFLAGS = -g -O2 -fPIC -Wno-deprecated 
+CXXFLAGS = -g -O2 -fPIC -Wno-deprecated -Wno-unused-command-line-argument
 CFLAGS = -g -O2
 CPPFLAGS =
 
 INCFLAGS = -I.
 
-LIBS = 
+LIBS = -lstdc++
 LDFLAGS = -L. -lMyLib
 
 all: read.exe
